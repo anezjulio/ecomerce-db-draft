@@ -12,10 +12,10 @@ public class Producto {
     @GeneratedValue
     private long idProducto;
 
-    private String descripcion;
-
     @NotNull
     private String titulo;
+
+    private String descripcion;
 
     @NotNull
     private BigDecimal precio;
