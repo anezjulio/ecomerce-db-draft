@@ -36,6 +36,8 @@ public class Usuario {
     @OneToMany(mappedBy = "usuario")
     private List<Factura> factura;
 
+    public Usuario(){}
+
     public Usuario(long idUsuario, @NotNull String password, @NotNull String nombre, String direccion, String telefono, String correo, @NotNull TipoUsuario tipoUsuario, List<ShoppingCar> listaShoppingCar, List<Factura> factura) {
         this.idUsuario = idUsuario;
         this.password = password;

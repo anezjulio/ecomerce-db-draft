@@ -20,6 +20,13 @@ public class Caracteristica {
     @JoinColumn(name = "idProducto")
     private Producto producto;
 
+    public Caracteristica(long idCaracteristica, @NotNull String titulo, String descripcion, Producto producto) {
+        this.idCaracteristica = idCaracteristica;
+        this.titulo = titulo;
+        this.descripcion = descripcion;
+        this.producto = producto;
+    }
+
     public Producto getProducto() {
         return producto;
     }

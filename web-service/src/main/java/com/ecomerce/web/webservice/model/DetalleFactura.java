@@ -27,6 +27,14 @@ public class DetalleFactura {
         return idDetalleFactura;
     }
 
+    public DetalleFactura(long idDetalleFactura, Producto producto, Factura factura, BigDecimal precio, long cantidad) {
+        this.idDetalleFactura = idDetalleFactura;
+        this.producto = producto;
+        this.factura = factura;
+        this.precio = precio;
+        this.cantidad = cantidad;
+    }
+
     public void setIdDetalleFactura(long idDetalleFactura) {
         this.idDetalleFactura = idDetalleFactura;
     }

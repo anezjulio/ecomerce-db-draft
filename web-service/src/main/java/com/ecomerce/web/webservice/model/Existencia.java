@@ -19,6 +19,13 @@ public class Existencia {
     @JoinColumn(name = "idProducto")
     private Producto producto;
 
+    public Existencia(long idExistencia, LocalDateTime fechaYHoraIngreso, long cantidad, Producto producto) {
+        this.idExistencia = idExistencia;
+        this.fechaYHoraIngreso = fechaYHoraIngreso;
+        this.cantidad = cantidad;
+        this.producto = producto;
+    }
+
     public Producto getProducto() {
         return producto;
     }

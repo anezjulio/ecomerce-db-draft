@@ -19,6 +19,13 @@ public class Categoria {
     @OneToMany(mappedBy = "categoria")
     private List<Producto> ListaProducto;
 
+    public Categoria(long idCategoria, String descripcion, @NotNull String titulo, List<Producto> listaProducto) {
+        this.idCategoria = idCategoria;
+        this.descripcion = descripcion;
+        this.titulo = titulo;
+        ListaProducto = listaProducto;
+    }
+
     public List<Producto> getListaProducto() {
         return ListaProducto;
     }

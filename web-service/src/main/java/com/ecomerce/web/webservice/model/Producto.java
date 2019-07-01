@@ -38,6 +38,19 @@ public class Producto {
     @OneToMany(mappedBy = "producto")
     private List<ShoppingCar> listaShoppingCar;
 
+    public Producto(long idProducto, @NotNull String titulo, String descripcion, @NotNull BigDecimal precio, boolean esCupon, Categoria categoria, List<Existencia> listaExistencia, List<Caracteristica> listaCaracteristica, List<DetalleFactura> listaDetalleFactura, List<ShoppingCar> listaShoppingCar) {
+        this.idProducto = idProducto;
+        this.titulo = titulo;
+        this.descripcion = descripcion;
+        this.precio = precio;
+        this.esCupon = esCupon;
+        this.categoria = categoria;
+        this.listaExistencia = listaExistencia;
+        this.listaCaracteristica = listaCaracteristica;
+        this.listaDetalleFactura = listaDetalleFactura;
+        this.listaShoppingCar = listaShoppingCar;
+    }
+
     public List<Existencia> getListaExistencia() {
         return listaExistencia;
     }

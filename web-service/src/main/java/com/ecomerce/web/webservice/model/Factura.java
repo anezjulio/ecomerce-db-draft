@@ -34,6 +34,17 @@ public class Factura {
     @JoinColumn(name = "idUsuario")
     private Usuario usuario;
 
+    public Factura(long idFactura, LocalDateTime fechaYHora, BigDecimal montoTotal, List<Comprobante> listaComprobante, List<Operacion> listaOperacion, List<DetalleFactura> listaDetalleFactura, Sede sede, Usuario usuario) {
+        this.idFactura = idFactura;
+        this.fechaYHora = fechaYHora;
+        this.montoTotal = montoTotal;
+        this.listaComprobante = listaComprobante;
+        this.listaOperacion = listaOperacion;
+        this.listaDetalleFactura = listaDetalleFactura;
+        this.sede = sede;
+        this.usuario = usuario;
+    }
+
     public long getIdFactura() {
         return idFactura;
     }

@@ -22,6 +22,15 @@ public class Sede {
     @OneToMany(mappedBy = "sede")
     private List<Factura> listaFactura;
 
+    public Sede(){}
+
+    public Sede(long idSede, @NotNull String titulo, String descripcion, List<Factura> listaFactura) {
+        this.idSede = idSede;
+        this.titulo = titulo;
+        this.descripcion = descripcion;
+        this.listaFactura = listaFactura;
+    }
+
     public String getTitulo() {
         return titulo;
     }

@@ -18,6 +18,12 @@ public class ShoppingCar {
     @JoinColumn(name = "idProducto")
     private Producto producto;
 
+    public ShoppingCar(long idShoppingCar, Usuario usuario, Producto producto) {
+        this.idShoppingCar = idShoppingCar;
+        this.usuario = usuario;
+        this.producto = producto;
+    }
+
     public long getIdShoppingCar() {
         return idShoppingCar;
     }

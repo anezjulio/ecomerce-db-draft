@@ -32,6 +32,15 @@ public class Operacion {
     @JoinColumn(name = "idFactura")
     private Factura factura;
 
+    public Operacion(long idOperacion, LocalDateTime fechaYHora, String motivo, @NotNull TipoOperacion tipoOperacion, EstadoOperacion estadoOperacion, Factura factura) {
+        this.idOperacion = idOperacion;
+        this.fechaYHora = fechaYHora;
+        this.motivo = motivo;
+        this.tipoOperacion = tipoOperacion;
+        this.estadoOperacion = estadoOperacion;
+        this.factura = factura;
+    }
+
     public Factura getFactura() {
         return factura;
     }

@@ -33,6 +33,14 @@ public class Comprobante {
         return estadoComprobante;
     }
 
+    public Comprobante(long idComprobante, String direccion, Factura factura, @NotNull TipoComprobante tipoComprobante, EstadoComprobante estadoComprobante) {
+        this.idComprobante = idComprobante;
+        this.direccion = direccion;
+        this.factura = factura;
+        this.tipoComprobante = tipoComprobante;
+        this.estadoComprobante = estadoComprobante;
+    }
+
     public void setTipoComprobante(TipoComprobante tipoComprobante) {
         this.tipoComprobante = tipoComprobante;
     }
